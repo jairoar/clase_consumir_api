@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Characters</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="#" class="navbar-brand mx-auto"
+        >Personajes del API - Rick & Morty
+      </a>
+    </nav>
+    <div><p></p></div>
+    <div class="d-flex justify-content-center">
+      <div class="card" style="width: 10rem">
+        <img src="<%= imagen %>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+            <h5 class="card-title"><%= nombre %></h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Species: </b><%= especie %></li>
+          <li class="list-group-item"><b>Status: </b><%= estatus %></li>
+          <li class="list-group-item"><b>Gender: </b><%= genero %></li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Enlace para hacer algo</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

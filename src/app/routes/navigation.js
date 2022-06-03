@@ -1,23 +1,19 @@
-const axios = require("axios");
+const utils = require("./utils.js");
 
 // Rutas para acceder al servidor
 // Funcion que recibe un servidor como parametro y le asigna rutas de acceso
 
 routes = (app) => {
-  app.get("/", (req, res) => {
-    axios
-      .get("https://rickandmortyapi.com/api")
-      .then(function (response) {
-        // handle success
-        console.log(response);
-      })
-      .catch(function (error) {
-        // handle error
-        console.log(error);
-      })
-      .then(function () {
-        // always executed
-      });
+  app.get("/", async (req, res) => {
+    character = await utils.getCharacterById("1");
+    character = character.data;
+    res.render("../views/characters.ejs", {
+      imagen: character.image,
+      nombre: character.name,
+      especie: character.species,
+      estatus: character.status,
+      genero: character.gender,
+    });
   });
 };
 
